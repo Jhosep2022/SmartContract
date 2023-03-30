@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Paciente</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="text-warning">Seguro </span>UCB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="datospaciente.html">Datos del Paciente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrosvitales.html">Registros Vitales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consulta.html">Consulta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="medicamentos.html">Medicamentos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Datos paciente -->
+    <section id="datos" class="datos datos  datos-padding">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="datos-img">
+                        <br>
+                        <br>
+                        <img src="img/fichapaciente.png" class="img-fluid" alt="datos">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <form class="formulario">
+                        <div class="card-body ">
+                            <div class="card card-padding">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="label" for="user">Nombres: </label><br>
+                                                <input class="input" type="text" id="nombres" placeholder="Nombre" />
+                                            </td>
+                                            <td>
+                                                <label class="label" for="user">Apellidos: </label><br>
+                                                <input class="input" type="text" id="apellidos"
+                                                    placeholder="Apellido" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="label" for="user">CI:</label><br>
+                                                <input class="input" type="text" id="ci" placeholder="CI" />
+                                            </td>
+                                            <td>
+                                                <label class="label" for="user">Edad: </label><br>
+                                                <input class="input" type="text" id="edad" placeholder="Edad" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                <label class="label" for="user">Dirección: </label><br>
+                                                <input class="input" type="text" id="direccion"
+                                                    placeholder="Direccion" />
+                                            </td>
+                                            <td>
+                                                <label class="label" for="user">Fecha de nacimiento: </label><br>
+                                                <input class="input" type="date" id="fecha_nacimiento" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="label" for="user">Celular: </label><br>
+                                                <input class="input" type="text" id="celular" placeholder="XXXXXXXX" />
+                                            </td>
+                                            <td>
+                                                <label class="label" for="user">Correo electrónico: </label><br>
+                                                <input class="input" type="text" id="email"
+                                                    placeholder="ejemplo@email.com"><br>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <input class="btn btn-warning btn-lg mt-3" type="button" value="Confirmar"
+                                    onClick="mostrar()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Funciones-->
+    <script>
+        function mostrar() {
+            var nom = document.getElementById('nombres').value;
+            var ap = document.getElementById('apellidos').value;
+            var ci = document.getElementById('ci').value;
+            var ed = document.getElementById('edad').value;
+            var dir = document.getElementById('direccion').value;
+            var fec = document.getElementById('fecha_nacimiento').value;
+            var cel = document.getElementById('celular').value;
+            var cor = document.getElementById('email').value;
+
+            if (nom == 0 || ap == 0 || ci == 0 || ed == 0 || dir == 0 || fec == 0 || cel == 0 || cor == 0) {
+                alert('Rellene todos los datos solicitados por favor.');
+            } else {
+                alert('Datos del paciente: \n Nombre: ' + nom + "\n Apellidos: " + ap + "\n Ci: " + ci + "\n Edad: " +
+                    ed + "\n Direccion: " + dir + "\n Fecha de nacimineto: " + fec + "\n Celular: " + cel +
+                    "\n Correo: " + cor);
+
+            }
+        }
+    </script>
+
+
+    <!--Footer -->
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">Todos los derechos reservados por @SeguroUCB</p>
+        </div>
+    </footer>
+
+    <script src="io.PNG"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
