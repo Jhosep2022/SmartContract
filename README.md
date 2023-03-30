@@ -1,4 +1,4 @@
-# SmartContract
+# Proyectos Tecnos Web
 Proyecto
 Integrantes:
 - Jose Condori
